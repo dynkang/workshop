@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>'27 1H 법인 워크샵 · 인플루언서마케팅G 세션 Q&amp;A</title>
+<style>
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+:root{
+  --ink:#17233b;--body:#52627d;--muted:#8090a7;--line:#e4eaf3;
+  --bg1:#ffffff;--bg2:#f9fcff;--bg3:#fbfaff;
+  --surface:rgba(255,255,255,.92);--surface-soft:rgba(255,255,255,.78);--chip:#f6f8fc;
+  --accent:#2a6099;--accent-2:#2980b6;--hover:linear-gradient(100deg,#edf9ff,#f2fbf8);
+  --q-bg:#e8f7ff;--q-ink:#1e6a9e;--o-bg:#e9fbf5;--o-ink:#137c70;--c-bg:#f3efff;--c-ink:#6d58a6;
+  --answer-bg:linear-gradient(115deg,#eefaff,#f2fcf9 54%,#f6f2ff);--answer-line:#d6edf0;
+  --add-bg:#fff9ec;--add-line:#e4af4d;--add-ink:#795e31;
+  --shadow:0 18px 45px rgba(67,105,148,.08);
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    color-scheme:dark;
+    --ink:#e6edf8;--body:#a9b6cb;--muted:#7f8ca3;--line:#26324a;
+    --bg1:#0f1626;--bg2:#111a2c;--bg3:#141a2e;
+    --surface:rgba(22,31,50,.92);--surface-soft:rgba(22,31,50,.8);--chip:#1b2540;
+    --accent:#8cc4f5;--accent-2:#7cc3ea;--hover:linear-gradient(100deg,#16314a,#163a37);
+    --q-bg:#133049;--q-ink:#8fd0f7;--o-bg:#123a34;--o-ink:#7fe0c9;--c-bg:#2a2347;--c-ink:#c4b5f5;
+    --answer-bg:linear-gradient(115deg,#142c40,#13332f 54%,#231f3d);--answer-line:#25435a;
+    --add-bg:#2d2615;--add-line:#c9973f;--add-ink:#e9cf9a;
+    --shadow:0 18px 45px rgba(0,0,0,.35);
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important}}
+body{margin:0;background:linear-gradient(135deg,var(--bg1) 5%,var(--bg2) 53%,var(--bg3));color:var(--ink);
+  font-family:Pretendard,"Pretendard Variable","Noto Sans KR",sans-serif;font-size:15px;line-height:1.7;word-break:keep-all}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent-2);outline-offset:2px;border-radius:8px}
+
+.top{height:72px;position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:16px;
+  padding:0 max(24px,calc((100vw - 1280px)/2));background:color-mix(in srgb,var(--bg1) 82%,transparent);
+  backdrop-filter:blur(22px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.02em}
+.brand-mark{width:34px;height:34px;border-radius:11px;background:linear-gradient(140deg,#5ab8ec,#73d9bb 58%,#b7a4ee);box-shadow:0 8px 20px rgba(110,200,225,.45)}
+.brand small{display:block;font-weight:600;color:var(--muted);font-size:.7rem}
+.search{margin-left:auto;width:min(300px,40vw);border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:8px 12px;color:var(--ink);font:inherit;font-size:.85rem}
+.search::placeholder{color:var(--muted)}
+
+.shell{display:grid;grid-template-columns:285px minmax(0,1fr);max-width:1280px;margin:auto;gap:44px;padding:34px 28px 80px}
+.sidebar{position:sticky;top:96px;align-self:start}
+.side-card{background:var(--surface-soft);border:1px solid var(--line);border-radius:20px;padding:17px;box-shadow:0 12px 34px rgba(73,115,157,.07)}
+.side-title{font-size:.8rem;font-weight:800;color:var(--muted);margin:2px 4px 12px}
+.filters{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.filters button{border:1px solid var(--line);background:var(--chip);border-radius:999px;padding:5px 11px;font-size:.78rem;font-weight:700;color:var(--body);cursor:pointer}
+.filters button.active{background:var(--hover);color:var(--accent);border-color:color-mix(in srgb,var(--accent-2) 40%,var(--line))}
+.nav-list{display:grid;gap:2px;max-height:calc(100vh - 290px);overflow:auto;padding-right:3px}
+.nav-group{font-size:.74rem;font-weight:800;color:var(--accent-2);margin:12px 7px 4px}
+.nav-group:first-child{margin-top:0}
+.nav-item{display:grid;grid-template-columns:30px 1fr;gap:6px;text-align:left;border:0;background:transparent;border-radius:10px;padding:8px 7px;color:var(--body);cursor:pointer;line-height:1.35}
+.nav-item:hover,.nav-item.active{background:var(--hover);color:var(--accent)}
+.nav-item span{font-size:.7rem;font-weight:850;color:var(--muted);padding-top:2px}
+.nav-item em{font-style:normal;font-weight:650;font-size:.82rem}
+
+.content{min-width:0}
+.intro{padding:14px 2px 28px}
+.intro .meta{display:flex;gap:9px;align-items:center;color:var(--accent-2);font-size:.82rem;font-weight:800}
+.intro .meta:before{content:"";width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#55c7ef,#68d7a9)}
+h1{font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.2;letter-spacing:-.05em;margin:10px 0 12px}
+.intro p{max-width:680px;margin:0;color:var(--body)}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.stat{border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:8px 14px;font-size:.82rem;color:var(--body)}
+.stat b{color:var(--ink);font-size:1rem;margin-right:4px}
+
+.section-head{display:flex;align-items:baseline;gap:10px;margin:34px 2px 14px}
+.section-head:first-of-type{margin-top:0}
+.section-head h2{font-size:1.35rem;letter-spacing:-.035em;margin:0}
+.section-head span{font-size:.8rem;color:var(--muted);font-weight:700}
+
+.qa{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:26px 28px;box-shadow:var(--shadow);margin-bottom:16px;scroll-margin-top:96px}
+.qa-top{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.badge{border-radius:999px;padding:2px 10px;font-size:.74rem;font-weight:800}
+.badge.q{background:var(--q-bg);color:var(--q-ink)}
+.badge.o{background:var(--o-bg);color:var(--o-ink)}
+.badge.c{background:var(--c-bg);color:var(--c-ink)}
+.who{font-size:.8rem;font-weight:700;color:var(--muted)}
+.num{margin-left:auto;font-size:.75rem;font-weight:800;color:var(--muted)}
+.qa h3{font-size:1.12rem;line-height:1.5;letter-spacing:-.03em;margin:10px 0 0}
+.context{margin:10px 0 0;padding-left:20px;color:var(--body);font-size:.9rem}
+.context li{padding-bottom:4px}
+.answer{margin-top:16px;background:var(--answer-bg);border:1px solid var(--answer-line);border-radius:15px;padding:14px 18px}
+.answer p.label{margin:0 0 4px;font-size:.76rem;font-weight:850;color:var(--accent-2)}
+.answer p{margin:0;color:var(--ink);font-size:.92rem}
+.answer p+p{margin-top:6px}
+.add{margin-top:10px;background:var(--add-bg);border-left:3px solid var(--add-line);border-radius:0 10px 10px 0;padding:9px 13px;color:var(--add-ink);font-size:.86rem}
+.add b{margin-right:6px}
+.empty{display:none;padding:50px 20px;text-align:center;color:var(--muted)}
+.note{margin:30px 2px 0;font-size:.8rem;color:var(--muted)}
+
+@media(max-width:860px){
+  .top{height:62px}.search{width:46vw}
+  .shell{display:block;padding:18px 16px 54px}
+  .sidebar{position:static;margin-bottom:20px}
+  .nav-list{max-height:240px}
+  .qa{padding:20px 18px}
+  .brand small{display:none}
+}
+@media print{
+  .top,.sidebar{display:none!important}
+  .shell{display:block;padding:0}
+  body{background:#fff}
+  .qa{box-shadow:none;break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="brand-mark" aria-hidden="true"></span><div>인플루언서마케팅G 세션 Q&amp;A<small>'27 1H 주요법인 워크샵 · 2026.10.22</small></div></div>
+  <input class="search" id="search" type="search" placeholder="키워드로 찾기 (예: Icon, HVE)" aria-label="Q&A 검색">
+</header>
+
+<div class="shell">
+  <aside class="sidebar">
+    <div class="side-card">
+      <p class="side-title">질문 찾아보기</p>
+      <div class="filters" id="filters" role="group" aria-label="유형 필터">
+        <button class="active" data-type="all">전체</button>
+        <button data-type="q">질문</button>
+        <button data-type="o">의견</button>
+        <button data-type="c">사례</button>
+      </div>
+      <nav class="nav-list" id="nav"></nav>
+    </div>
+  </aside>
+
+  <main class="content">
+    <section class="intro">
+      <div class="meta">2026.10.22 · 오전 세션</div>
+      <h1>법인에서 나온 질문과 의견</h1>
+      <p>그룹장님 발표('27 1H Influencer &amp; Content Creator Marketing) 중 법인에서 나온 질문, 의견, 사례 공유와 현장 답변을 주제별로 정리했습니다.</p>
+      <div class="legend" id="stats"></div>
+    </section>
+
+    <div id="list"></div>
+    <div class="empty" id="empty">검색 결과가 없습니다. 다른 키워드로 찾아보세요.</div>
+    <p class="note">녹취(STT) 기반 정리입니다. 발언자 소속은 발언 맥락상 확인 가능한 경우에만 표기했고, 일부 질문은 녹음에 잡히지 않아 답변 내용으로 추정했습니다.</p>
+  </main>
+</div>
+
+<script>
+const SECTIONS = [
+  {id:"creator", title:"Content Creator", items:[
+    {type:"q", who:"법인 참석자", title:"GCC 도입 시 기존 크리에이터 에이전시의 역할과 비용은?",
+     context:["현재 인플루언서 관리 비용의 상당 부분이 에이전시에 지출되고 있음","협업 인원이 늘어나면 부대비용도 증가할 수 있다는 우려"],
+     answer:["플레이북에서 다룰 예정. 초기에는 크리에이터 발굴을 위해 에이전시 의존이 불가피하나, 경험이 쌓이면 점진적으로 에이전시 없이 직접 운영할 수 있음.","이미 크리에이터 관계가 구축된 법인은 처음부터 직접 운영도 가능."]},
+    {type:"o", who:"SEA", title:"GCC 전폭 지지, 글로벌 사용권 확보도 함께 고려하자",
+     context:["일부 크리에이터는 에이전시에 견줄 퀄리티를 내고 있음. 최대한 빨리 도입하고 싶다는 입장","보이스오버가 없는 콘텐츠 등은 타 시장에서도 활용 가능하므로 Pass-through rights 고려 필요"],
+     answer:["로컬 계약 시에도 글로벌 사용권 확보를 권고. 영어권(US → UK, 호주)은 바로 활용하고, 그 외 시장은 자막이나 보이스오버로 재활용."]},
+    {type:"q", who:"법인 참석자", title:"Creator-first 크리에이터는 갤럭시 전용 사용자가 아닌데 괜찮은가?",
+     answer:["크리에이터에게는 퍼스낼리티나 일상을 사는 것이 아니라 콘텐츠 제작을 맡기는 것. 에이전시가 어떤 기기를 쓰는지 확인하지 않는 것과 같은 맥락으로, 인플루언서와는 구분해서 봐야 함."]},
+    {type:"q", who:"법인 참석자", title:"클리핑은 에이전시인가, 네트워크인가? 글로벌 네트워크 공유가 가능한가?",
+     context:["법인별로 에이전시를 새로 찾는 데 시간이 많이 소요됨"],
+     answer:["현재 파일럿은 클리핑 전문 소형 에이전시와 진행 중. 네트워크 정보를 공유할 예정."]},
+    {type:"c", who:"Indonesia", title:"로컬 에이전시의 클리퍼 네트워크 활용 사례",
+     context:["클리퍼가 본인 관점의 보이스오버를 입혀 새로운 콘텐츠로 알고리즘에 확산","성과가 양호했으며, 한국 사례에서 아이디어를 얻음"]},
+    {type:"q", who:"법인 참석자", title:"수원 파일럿에서 클리퍼에게 제공한 콘텐츠를 법인도 받을 수 있나?",
+     answer:["브리프와 콘텐츠 일체를 공유할 예정. 브랜드 콘텐츠 약 9건, 크리에이터 콘텐츠 20건 이상이며 권리 처리 완료된 상태."]},
+    {type:"q", who:"유럽", title:"로컬 크리에이터 콘텐츠 품질 편차, 수원은 어떻게 관리하나?",
+     context:["로컬 제작 콘텐츠의 품질 차이가 크고, 브랜드 기준과 맞지 않을 수 있다는 우려"],
+     answer:["정성·정량 크리에이터 선정 기준(Strategic Alignment, Relevance, Outputs, Effectiveness) 가이드를 제공. Traackr와 대시보드로 과거 성과를 확인한 뒤 선정해야 함.","2년간 운영하며 쌓은 Lessons Learned 문서도 공유 예정. GCL 하위권 법인은 크리에이터 풀 재정비가 우선."]}
+  ]},
+  {id:"icon", title:"Influencer · Icon과 Authenticity", items:[
+    {type:"q", who:"US 법인", title:"Icon은 폰을 매니저가 관리하는 경우가 많은데, 6개월간 실사용을 어떻게 검증하나?",
+     answer:["정량화가 어려운 영역이라 수동 확인이 필요. 본인과의 소통, 타 매체나 PR 노출(예: K-pop 아이돌 공항 사진) 등으로 확인.","Co-review 단계에서 실사용 증빙을 요청할 예정."]},
+    {type:"q", who:"SEA", title:"PR Value는 어떻게 평가하나?",
+     context:["Audience Sentiment, Brand Impact, 향후 진행 프로젝트 등 다양한 관점이 가능"],
+     answer:["상세 정의는 개발 중. 기본적으로 최근 1년간 PR 매체 노출 여부, 유사한 셀럽과의 비교, Sentiment 등을 검토."],
+     add:[["PR 관점 의견","노출량보다 디바이스와 연결할 수 있는 진정성 있는 스토리를 보유했는지가 더 중요."]]},
+    {type:"q", who:"SEA", title:"6개월 사전 시딩은 조건 없는 제공인가?",
+     answer:["조건 없음. 다만 실사용하지 않으면 계약하지 않음."],
+     add:[["SEA 의견","폰만이 아니라 워치, 링 등 에코시스템 전체를, 나아가 지인 그룹까지 시딩해서 감사(audit)가 아니라 환영하는 느낌으로 접근하자."],["답변","동의. 최소 폰, 워치, 버즈 수준으로 시딩을 권고."]]},
+    {type:"q", who:"법인 참석자", title:"6개월 사전 시딩, 런칭용 탤런트를 지금부터 찾아야 한다는 뜻인가?",
+     answer:["차기 디바이스를 미리 쓰게 하라는 뜻이 아니라, 갤럭시 에코시스템을 메인으로 쓸 의향이 있는지 확인하려는 취지."],
+     add:[["SEA 의견","Icon은 비싸고 금전 동기가 강해 쉽지 않지만 선별 강화 방향에는 동의. US는 S시리즈에서 Icon 없이도 성과가 좋았으므로 셀럽 필요성 자체를 재검토할 시점. 최근 브랜드들은 친구 그룹 형태의 집단 스토리텔링을 활용 중."],["답변","Icon 예산을 크리에이터 콘텐츠 Paid Boost나 다수의 하위 티어 인플루언서로 돌리는 방안 등 장단점을 검토해야 함."]]},
+    {type:"o", who:"SEA", title:"일상 속 갤럭시 노출(Organic)을 계약에 명시해야 한다",
+     context:["아이폰을 쓸 때는 매일 포스팅하다가 갤럭시로 바꾸면 계약 건수만 채우는 사례가 많음","권장만으로는 부족하며, SEA는 최소 비율 형태 등으로 계약에 넣을 예정"],
+     answer:["동의. 다만 오가닉 콘텐츠를 계약에 넣을 수 있는지 법무 검토가 필요."],
+     add:[["유럽 의견","유럽에서는 계약에 포함되면 기프팅 폰이라도 유료(Paid) 콘텐츠로 간주되므로 고지 의무에 유의."]]},
+    {type:"q", who:"유럽", title:"Passion Point(Sports, Music)는 어디까지 좁힐 것인가?",
+     answer:["4대 커뮤니티 안에서 집중할 세부 서브컬처를 연구 중이며, 상세 가이드를 제공할 예정."]},
+    {type:"o", who:"법인 참석자", title:"#withGalaxy 우선순위가 낮아진 것 같다. 수원이 법인 책임을 다시 부여해 달라",
+     context:["과거처럼 분기별 캠페인으로 법인 Accountability를 부여해야 로컬에서도 추진력이 생김","다중 터치포인트를 활용한 도시 기반 인플루언서 캠페인도 좋은 사례였음"],
+     answer:["우선순위를 낮춘 것은 아님. #withGalaxy를 #madewithGalaxy로 진화시켜 촬영뿐 아니라 AI 편집 경험까지 포괄할 예정.","IG 'Samsung with Galaxy' 채널도 리브랜딩하며, Orion 런칭에 맞춰 리브랜딩 캠페인을 계획 중."]},
+    {type:"o", who:"법인 참석자", title:"장기 TeamGalaxy 멤버의 자부심을 진정성 강화에 활용하자",
+     context:["예: '5년째 TeamGalaxy'라며 자랑스러워하는 멤버의 사례"],
+     answer:["인플루언서 관리는 개인이 아니라 커뮤니티 관리 관점이어야 함. TeamGalaxy 멤버 간 네트워킹으로 소속감을 형성(B2C2C 프레임워크)."]},
+    {type:"o", who:"법인 참석자", title:"Organic 노출 집계에 IG 스토리도 포함해야 한다",
+     answer:["현재 툴 한계로 스토리 전수 추적은 불가. KPI 전환에 맞춰 스토리 자동 추적이 가능한 Traackr 대체 툴을 검토 중."],
+     add:[["유럽 의견","인플루언서의 데이터 공유 동의가 필요하며, GDPR 등으로 작년 동의율이 약 20%에 그침. 새 툴도 동의 기반이라면 같은 한계가 있으므로 '데이터 공유 필수' 같은 회사 차원의 방침이 필요할 수 있음."]]},
+    {type:"q", who:"법인 참석자", title:"Authenticity 기준을 Macro, Micro에는 어떻게 적용하나?",
+     answer:["5개 차원 선정 기준은 전 티어에 공통 적용. Icon에만 별도로 더 엄격한 기준을 추가하는 구조."]}
+  ]},
+  {id:"kpi", title:"Influencer · KPI와 Reach 로직", items:[
+    {type:"q", who:"법인 참석자", title:"HVE Rate는 Samsung 관련 콘텐츠에만 적용되나? 벤치마크는?",
+     answer:["현행 E/R 측정 방식과 같고 지표만 HVE로 바뀜. 벤치마크를 분석 중이며 글로벌 및 법인별 Target을 제공할 예정.","실제 Impression 대신 Po.Reach를 쓰는 이유는 글로벌 단위로 1st party 데이터를 자동 수집할 수 없기 때문. 법인에서 실제 Impression을 확보할 수 있다면 Po.Reach와 비교해 개별 인플루언서 평가에 활용 가능."],
+     add:[["유럽 제안","과거 GCL의 Share, Save 데이터를 보유하고 있어 벤치마크 수립에 협업할 의사가 있음."]]},
+    {type:"q", who:"법인 참석자", title:"KPI가 바뀌면 브리프와 아웃풋도 바뀌어야 하는데, 인플루언서 측 KPI와 충돌은 없나?",
+     answer:["'26년 전체 콘텐츠를 분석해 HVE를 유발하는 요소를 도출하고 브리프 가이드로 제공할 예정.","근거로 '26 2H Unpacked TikTok 606건을 분석한 결과, D+1 HVE 상위 50% 포스트의 D+7 바이럴 확률이 x1.8."]},
+    {type:"q", who:"법인 참석자", title:"커뮤니티 마케팅 비중이 커지는데 Reach Target은 계속 늘어야 하나?",
+     answer:["US 등 대형 시장 콘텐츠는 국경을 넘어 영향을 주므로 시장 규모와 ASP가 큰 법인에 더 큰 역할을 부여.","Reach Target은 Paid만이 아니라 오가닉 콘텐츠, 커뮤니티 마케팅용 콘텐츠도 합산."]},
+    {type:"o", who:"SEA", title:"6B Reach Target(US x4.7)은 비현실적이다",
+     context:["고팔로워 인플루언서로 숫자를 맞추고 싶지 않지만, 목표를 맞추려면 그럴 수밖에 없음","Micro, Nano로 전환 중인데 이들은 숫자가 나오지 않음","예산 재배분 없이는 불가하며 Owned, Earned, Paid 계획 전체를 재검토해야 함"],
+     answer:["피드백을 반영해 로직을 보완할 예정. 티어와 Passion Point별 배분을 도입하므로 조정 여지가 있음. Icon보다 Macro, Micro 중심 방향은 유지."]},
+    {type:"q", who:"법인 참석자", title:"질 중심의 HVE KPI와 Reach x5 목표는 상충하지 않나?",
+     context:["예산은 줄어드는데 볼륨과 퀄리티를 동시에 맞춰야 하는 상황","중복 도달과 빈도 문제, 즉 핵심 오디언스 과포화 우려도 함께 제기"],
+     answer:["US가 가장 영향이 큰 사례. 법인별 영향을 시뮬레이션한 뒤, 예산 축소와 HVE 목표 상황에서 과도한 부담이 되지 않도록 조정한 방향을 제시할 예정."]}
+  ]},
+  {id:"members", title:"Samsung Members & Online Community", items:[
+    {type:"o", who:"법인 참석자", title:"Members 앱 UX를 업그레이드해 달라",
+     context:["여러 차례 요청했으나 반영되지 않았음","브랜드 앰배서더를 확보할 수 있는 훌륭한 채널이라는 의견"],
+     answer:["앱은 서비스사업팀에서 개발. 외부 전문가와 UX 리뷰를 진행 중이며, 개선 권고안을 정리해 전달할 예정."]},
+    {type:"o", who:"법인 참석자", title:"Members 웹사이트, 비갤럭시 사용자도 참여할 수 있는 구조가 필요하다",
+     context:["CE 제품 충성 고객 상당수가 아이폰 사용자","이들이 Members 안에서 MX 관련 대화에 노출되면 전환 기회가 될 수 있음"],
+     answer:["동의. GBM 간 논의가 필요한 사안이므로 관련 부서와 논의한 뒤 피드백할 예정."]}
+  ]}
+];
+const TYPE = {q:"질문", o:"의견", c:"사례"};
+const esc = s => s.replace(/[&<>"]/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+
+let n = 0;
+const list = document.getElementById("list"), nav = document.getElementById("nav");
+let listHTML = "", navHTML = "";
+SECTIONS.forEach(sec => {
+  listHTML += `<div class="section-head" data-sec="${sec.id}"><h2>${esc(sec.title)}</h2><span>${sec.items.length}건</span></div>`;
+  navHTML += `<p class="nav-group" data-sec="${sec.id}">${esc(sec.title)}</p>`;
+  sec.items.forEach(it => {
+    n++; const id = "qa-" + n, no = String(n).padStart(2, "0");
+    it.id = id; it.sec = sec.id;
+    const ctx = it.context ? `<ul class="context">${it.context.map(c => `<li>${esc(c)}</li>`).join("")}</ul>` : "";
+    const ans = it.answer ? `<div class="answer"><p class="label">그룹장님 답변</p>${it.answer.map(a => `<p>${esc(a)}</p>`).join("")}</div>` : "";
+    const add = it.add ? it.add.map(([k, v]) => `<div class="add"><b>${esc(k)}</b>${esc(v)}</div>`).join("") : "";
+    listHTML += `<article class="qa" id="${id}" data-type="${it.type}" data-sec="${sec.id}">
+      <div class="qa-top"><span class="badge ${it.type}">${TYPE[it.type]}</span><span class="who">${esc(it.who)}</span><span class="num">${no}</span></div>
+      <h3>${esc(it.title)}</h3>${ctx}${ans}${add}</article>`;
+    navHTML += `<button class="nav-item" data-target="${id}" data-type="${it.type}" data-sec="${sec.id}"><span>${no}</span><em>${esc(it.title)}</em></button>`;
+  });
+});
+list.innerHTML = listHTML; nav.innerHTML = navHTML;
+
+const all = SECTIONS.flatMap(s => s.items);
+const count = t => all.filter(i => i.type === t).length;
+document.getElementById("stats").innerHTML =
+  `<span class="stat"><b>${all.length}</b>건 전체</span><span class="stat"><b>${count("q")}</b>질문</span><span class="stat"><b>${count("o")}</b>의견</span><span class="stat"><b>${count("c")}</b>사례</span>`;
+
+let typeFilter = "all", query = "";
+function apply(){
+  const q = query.trim().toLowerCase(); let shown = 0; const secShown = {};
+  document.querySelectorAll(".qa").forEach(el => {
+    const ok = (typeFilter === "all" || el.dataset.type === typeFilter) && (!q || el.textContent.toLowerCase().includes(q));
+    el.style.display = ok ? "" : "none";
+    nav.querySelector(`[data-target="${el.id}"]`).style.display = ok ? "" : "none";
+    if (ok){ shown++; secShown[el.dataset.sec] = true; }
+  });
+  document.querySelectorAll(".section-head, .nav-group").forEach(h => h.style.display = secShown[h.dataset.sec] ? "" : "none");
+  document.getElementById("empty").style.display = shown ? "none" : "block";
+}
+document.getElementById("filters").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  document.querySelectorAll("#filters button").forEach(x => x.classList.toggle("active", x === b));
+  typeFilter = b.dataset.type; apply();
+});
+document.getElementById("search").addEventListener("input", e => { query = e.target.value; apply(); });
+nav.addEventListener("click", e => {
+  const b = e.target.closest(".nav-item"); if (!b) return;
+  document.getElementById(b.dataset.target).scrollIntoView({block:"start"});
+});
+const io = new IntersectionObserver(entries => {
+  entries.forEach(en => { if (en.isIntersecting){
+    nav.querySelectorAll(".nav-item").forEach(x => x.classList.toggle("active", x.dataset.target === en.target.id));
+  }});
+}, {rootMargin:"-100px 0px -65% 0px"});
+document.querySelectorAll(".qa").forEach(el => io.observe(el));
+</script>
+</body>
+</html>
